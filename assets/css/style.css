@@ -2,4 +2,10 @@
 @import url("components/menu-left.css");
 @import url("components/inbox.css");
 @import url("components/lateral-panel.css");
-@import url("components/footer-inbox.css")
+@import url("components/footer-inbox.css");
+@import url("components/main-gmail.css");
+
+body{
+    display: flex;
+    flex-direction: column;
+}
