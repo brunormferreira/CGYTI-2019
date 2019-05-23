@@ -1,236 +1,242 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <title>Gmail</title>
-  </head>
 
-  <body>
-    <header class="header">
-      <nav class="nav-bar">
-        <svg class="icon-menu" focusable="false" viewBox="0 0 24 24">
-          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="shortcut icon" type="imagem/x-icon" href="assets/images/gmail-icon.png" />
+  <title>Gmail</title>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav-bar">
+      <svg class="icon-menu" focusable="false" viewBox="0 0 24 24">
+        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+      </svg>
+      <img src="assets/images/logo-gmail.png" alt="" class="gmail-logo" />
+    </nav>
+    <div class="search-container">
+      <label for="" class="search-email-box">
+        <svg focusable="false" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="icon-search">
+          <path
+            d="M20.49,19l-5.73-5.73C15.53,12.2,16,10.91,16,9.5C16,5.91,13.09,3,9.5,3S3,5.91,3,9.5C3,13.09,5.91,16,9.5,16 c1.41,0,2.7-0.47,3.77-1.24L19,20.49L20.49,19z M5,9.5C5,7.01,7.01,5,9.5,5S14,7.01,14,9.5S11.99,14,9.5,14S5,11.99,5,9.5z">
+          </path>
+          <path d="M0,0h24v24H0V0z" fill="none"></path>
         </svg>
-        <img src="assets/images/logo-gmail.png" alt="" class="gmail-logo" />
-      </nav>
-      <div class="search-container">
-        <label for="" class="search-email-box">
-          <svg
-            focusable="false"
-            height="24px"
-            viewBox="0 0 24 24"
-            width="24px"
-            xmlns="http://www.w3.org/2000/svg"
-            class="icon-search"
-          >
+        <input type="text" class="search-email" placeholder="Search E-mail" />
+        <svg focusable="false" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg" class="icon-filter">
+          <path d="M7 10l5 5 5-5z"></path>
+          <path d="M0 0h24v24H0z" fill="none"></path>
+        </svg>
+      </label>
+    </div>
+    <nav class="header-icons">
+      <ul class="icons-list">
+        <li class="icons-item">
+          <svg class="icon-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000000" focusable="false">
+            <path fill="none" d="M0 0h24v24H0z"></path>
             <path
-              d="M20.49,19l-5.73-5.73C15.53,12.2,16,10.91,16,9.5C16,5.91,13.09,3,9.5,3S3,5.91,3,9.5C3,13.09,5.91,16,9.5,16 c1.41,0,2.7-0.47,3.77-1.24L19,20.49L20.49,19z M5,9.5C5,7.01,7.01,5,9.5,5S14,7.01,14,9.5S11.99,14,9.5,14S5,11.99,5,9.5z"
-            ></path>
-            <path d="M0,0h24v24H0V0z" fill="none"></path>
+              d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z">
+            </path>
           </svg>
-          <input type="text" class="search-email" placeholder="Search E-mail" />
-          <svg focusable="false" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg" class="icon-filter"><path d="M7 10l5 5 5-5z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg>
-        </label>
-      </div>
-      <nav class="header-icons">
-        <ul class="icons-list">
-          <li class="icons-item">
-            <svg
-              class="icon-img"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="#000000"
-              focusable="false"
-            >
-              <path fill="none" d="M0 0h24v24H0z"></path>
-              <path
-                d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
-              ></path>
-            </svg>
-          </li>
-          <li class="icons-item">
-            <svg class="icon-img" focusable="false" viewBox="0 0 24 24">
-              <path
-                d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"
-              ></path>
-            </svg>
-          </li>
-          <li class="icons-item">
-            <img
-              src="assets/images/profile-photo.jpeg"
-              alt=""
-              class="user-img"
-            />
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <section class="menu-left">
-    <section class="write-button">
-      <a class="write-email">
-        <img class="write-email-img"
-          src="https://www.gstatic.com/images/icons/material/colored_icons/1x/create_32dp.png" alt="">
-        <span class="write-email-text">Escrever</span>
-      </a>
-    </section>
-
-    <section class="nav-menu">
-      <nav class="menu-navigation">
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a href="#">
-              <img src="https://www.gstatic.com/images/icons/material/system/1x/inbox_black_20dp.png" alt="">
-              <span class="nav-text">Caixa de entrada</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#">
-              <img src="https://www.gstatic.com/images/icons/material/system/1x/grade_black_20dp.png" alt="">
-              <span class="nav-text">Com estrela</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#">
-              <img src="https://www.gstatic.com/images/icons/material/system/1x/watch_later_black_20dp.png" alt="">
-              <span class="nav-text">Adiados</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#">
-              <img src="https://www.gstatic.com/images/icons/material/system/1x/send_black_20dp.png" alt="">
-              <span class="nav-text">Enviados</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#">
-              <img src="https://www.gstatic.com/images/icons/material/system/1x/insert_drive_file_black_20dp.png"
-                alt="">
-              <span class="nav-text">Rascunhos</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#">
-              <img src="https://www.gstatic.com/images/icons/material/system/1x/expand_more_black_20dp.png" alt="">
-              <span class="nav-text">Mais</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </section>
-
-    <section class="hangout">
-      <header class="hangout-header">
-        <img src="assets/img/users/tejada.png" alt="">
-        <span>Panca</span>
-        <svg width="18px" height="18px" viewBox="0 0 48 48" class="pTh3n ydLZ9 f">
-          <path d="M38 26H26v12h-4V26H10v-4h12V10h4v12h12v4z"></path>
-        </svg>
-      </header>
-      <div class="hangout-talk">
-        <div class="hangout-talk-profile">
-          <img src="assets/img/users/tejada.png" alt="" class="profile-photo" />
-          <div class="hangout-users-info">
-            <p class="profile-name">Tejada</p>
-            <span class="profile-message">Você: Sou backend :P</span>
-          </div>
-        </div>
-        <div class="hangout-talk-profile">
-          <img src="assets/img/users/tejada.png" alt="" class="profile-photo" />
-          <div class="hangout-users-info">
-            <p class="profile-name">Tejada</p>
-            <span class="profile-message">Você: Sou backend :P</span>
-          </div>
-        </div>
-        <div class="hangout-talk-profile">
-          <img src="assets/img/users/tejada.png" alt="" class="profile-photo" />
-          <div class="hangout-users-info">
-            <p class="profile-name">Tejada</p>
-            <span class="profile-message">Você: Sou backend :P</span>
-          </div>
-        </div>
-      </div>
-      <footer class="hangout-footer">
-        <ul class="hangout-list-options">
-          <li class="hangout-options">
-            <img src="http://ssl.gstatic.com/ui/v1/icons/mail/wbt/contacts_icon21.png">
-          </li>
-          <li class="hangout-options">
-            <img src="http://ssl.gstatic.com/ui/v1/icons/mail/wbt/hangouts_icon21.png">
-          </li>
-          <li class="hangout-options"></li>
-        </ul>
-      </footer>
-    </section>
-  </section>
-
-  <section class="inbox">
-    <header class="header-inbox">
-      <div class="icon-inbox-left">
-        <ul class="icon-inbox-list">
-          <li class="icon-inbox-item"></li>
-          <li class="icon-inbox-item"></li>
-          <li class="icon-inbox-item"></li>
-        </ul>
-      </div>
-      <div class="icon-inbox-right">
-        <span class="inbox-quantity"></span>
-        <img src="" alt="" class="arrow-previous" />
-        <img src="" alt="" class="arrow-next" />
-        <img src="" alt="" class="inbox-settings" />
-      </div>
-    </header> 
-
-    <nav class="nav-inbox">
-      <ul class="nav-inbox-list">
-        <li class="nav-inbox-item"></li>
-        <li class="nav-inbox-item"></li>
-        <li class="nav-inbox-item"></li>
+        </li>
+        <li class="icons-item">
+          <svg class="icon-img" focusable="false" viewBox="0 0 24 24">
+            <path
+              d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z">
+            </path>
+          </svg>
+        </li>
+        <li class="icons-item">
+          <img src="assets/images/profile-photo.jpeg" alt="" class="user-img" />
+        </li>
       </ul>
     </nav>
+  </header>
 
-    <main class="emails">
-      <table class="email-list">
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </table>
-    </main>
+  <main class="main-gmail">
+    <section class="menu-left">
+      <section class="write-button">
+        <a class="write-email">
+          <img class="write-email-img"
+            src="https://www.gstatic.com/images/icons/material/colored_icons/1x/create_32dp.png" alt="">
+          <span class="write-email-text">Escrever</span>
+        </a>
+      </section>
 
-    <footer class="footer-inbox">
-      <div class="footer-inbox-left">
-        <p class="footer-inbox-side-paragraph-style">0,01 GB (0%) de 30 GB usados</p>
-        <a href="" class="footer-inbox-side-ancor-style">Gerenciar</a>
-      </div>
-      <div class="footer-inbox-middle">
-        <a href="" class="footer-inbox-middle-ancors-style">Termos de serviço</a>
-        ·
-        <a href="" class="footer-inbox-middle-ancors-style">Privacidade</a>
-        ·
-        <a href="" class="footer-inbox-middle-ancors-style">Regulamentos do Programa</a>
-      </div>
-      <div class="footer-inbox-right">
-        <p class="footer-inbox-side-paragraph-style">Última atividade da conta: há 18 horas</p>
-        <a href="" class="footer-inbox-side-ancor-style">Detalhes</a>
-      </div>
-    </footer>
-  </section>
+      <section class="nav-menu">
+        <nav class="menu-navigation">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#">
+                <img src="https://www.gstatic.com/images/icons/material/system/1x/inbox_black_20dp.png" alt="">
+                <span class="nav-text">Caixa de entrada</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <img src="https://www.gstatic.com/images/icons/material/system/1x/grade_black_20dp.png" alt="">
+                <span class="nav-text">Com estrela</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <img src="https://www.gstatic.com/images/icons/material/system/1x/watch_later_black_20dp.png" alt="">
+                <span class="nav-text">Adiados</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <img src="https://www.gstatic.com/images/icons/material/system/1x/send_black_20dp.png" alt="">
+                <span class="nav-text">Enviados</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <img src="https://www.gstatic.com/images/icons/material/system/1x/insert_drive_file_black_20dp.png"
+                  alt="">
+                <span class="nav-text">Rascunhos</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <img src="https://www.gstatic.com/images/icons/material/system/1x/expand_more_black_20dp.png" alt="">
+                <span class="nav-text">Mais</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </section>
 
-  <aside class="lateral-panel">
-    <ul class="lateral-panel-list">
-      <li class="lateral-panel-item"></li>
-      <li class="lateral-panel-item"></li>
-      <li class="lateral-panel-item"></li>
-      <li class="lateral-panel-item"></li>
-    </ul>
-  </aside>
-  </body>
+      <section class="hangout">
+        <header class="hangout-header">
+          <img src="assets/img/users/tejada.png" alt="">
+          <span>Panca</span>
+          <svg width="18px" height="18px" viewBox="0 0 48 48" class="pTh3n ydLZ9 f">
+            <path d="M38 26H26v12h-4V26H10v-4h12V10h4v12h12v4z"></path>
+          </svg>
+        </header>
+        <div class="hangout-talk">
+          <div class="hangout-talk-profile">
+            <img src="assets/img/users/tejada.png" alt="" class="profile-photo" />
+            <div class="hangout-users-info">
+              <p class="profile-name">Tejada</p>
+              <span class="profile-message">Você: Sou backend :P</span>
+            </div>
+          </div>
+          <div class="hangout-talk-profile">
+            <img src="assets/img/users/tejada.png" alt="" class="profile-photo" />
+            <div class="hangout-users-info">
+              <p class="profile-name">Tejada</p>
+              <span class="profile-message">Você: Sou backend :P</span>
+            </div>
+          </div>
+          <div class="hangout-talk-profile">
+            <img src="assets/img/users/tejada.png" alt="" class="profile-photo" />
+            <div class="hangout-users-info">
+              <p class="profile-name">Tejada</p>
+              <span class="profile-message">Você: Sou backend :P</span>
+            </div>
+          </div>
+        </div>
+        <footer class="hangout-footer">
+          <ul class="hangout-list-options">
+            <li class="hangout-options">
+              <img src="http://ssl.gstatic.com/ui/v1/icons/mail/wbt/contacts_icon21.png">
+            </li>
+            <li class="hangout-options">
+              <img src="http://ssl.gstatic.com/ui/v1/icons/mail/wbt/hangouts_icon21.png">
+            </li>
+            <li class="hangout-options"></li>
+          </ul>
+        </footer>
+      </section>
+    </section>
+
+    <section class="inbox">
+      <header class="header-inbox">
+        <div class="icon-inbox-left">
+          <ul class="icon-inbox-list">
+            <li class="icon-inbox-item"></li>
+            <li class="icon-inbox-item"></li>
+            <li class="icon-inbox-item"></li>
+          </ul>
+        </div>
+        <div class="icon-inbox-right">
+          <span class="inbox-quantity"></span>
+          <img src="" alt="" class="arrow-previous" />
+          <img src="" alt="" class="arrow-next" />
+          <img src="" alt="" class="inbox-settings" />
+        </div>
+      </header>
+
+      <nav class="nav-inbox">
+        <ul class="nav-inbox-list">
+          <li class="nav-inbox-item"></li>
+          <li class="nav-inbox-item"></li>
+          <li class="nav-inbox-item"></li>
+        </ul>
+      </nav>
+
+      <main class="emails">
+        <table class="email-list">
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </main>
+
+      <footer class="footer-inbox">
+        <div class="footer-inbox-left">
+          <p class="footer-inbox-side-paragraph-style">0,01 GB (0%) de 30 GB usados</p>
+          <a href="" class="footer-inbox-side-ancor-style">Gerenciar</a>
+        </div>
+        <div class="footer-inbox-middle">
+          <a href="" class="footer-inbox-middle-ancors-style">Termos de serviço</a>
+          ·
+          <a href="" class="footer-inbox-middle-ancors-style">Privacidade</a>
+          ·
+          <a href="" class="footer-inbox-middle-ancors-style">Regulamentos do Programa</a>
+        </div>
+        <div class="footer-inbox-right">
+          <p class="footer-inbox-side-paragraph-style">Última atividade da conta: há 18 horas</p>
+          <a href="" class="footer-inbox-side-ancor-style">Detalhes</a>
+        </div>
+      </footer>
+    </section>
+
+    <aside class="lateral-panel">
+      <ul class="lateral-panel-list">
+        <li class="lateral-panel-item">
+          <img src="assets/images/logo-calendar.png" alt="" class="google-app">
+        </li>
+        <li class="lateral-panel-item">
+          <img src="assets/images/logo-notes.png" alt="" class="google-app">
+        </li>
+        <li class="lateral-panel-item">
+          <img src="assets/images/logo-tasks.png" alt="" class="google-app">
+        </li>
+        <hr class="line">
+        <li class="lateral-panel-item">
+          <img src="assets/images/plus-icon.png" alt="" class="more-google-apps">
+        </li>
+      </ul>
+      <svg class="icon-more" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 24 24"
+        enable-background="new 0 0 24 24" xml:space="preserve" fill="#5F6368">
+        <path d="M8.59,16.59L13.17,12L8.59,7.41L10,6l6,6l-6,6L8.59,16.59z"></path>
+        <path fill="none" d="M0,0h24v24H0V0z"></path>
+      </svg>
+
+    </aside>
+  </main>
+</body>
+
 </html>
