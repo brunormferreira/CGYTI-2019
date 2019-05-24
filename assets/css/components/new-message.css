@@ -168,7 +168,7 @@
 .email-icon:hover img{
     opacity: 1;
     background-color: #f1f3f4;
-    border-radius: 3px
+    border-radius: 3px;
     cursor: pointer;
 }
 
