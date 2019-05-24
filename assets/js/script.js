@@ -57,7 +57,7 @@ $("body").click(function(event) {
   if (!$("label.search-email-box").is(event.target) && !$("input.search-email").is(event.target)) {
     $("label.search-email-box").removeClass("search-email-click");
     $("input.search-email").css("background-color", "#f1f3f4");
-  }
+  }});
 
 const users = [{
         nome: 'Mauricio',
@@ -75,11 +75,10 @@ const users = [{
         nome: 'Bean',
         foto: 'assets/images/users/bean.jpeg',
         ultimaMensagem: 'Você: Hello XD',
-    },
-
+    }
 ]
 
-let html = ''
+let html = '';
 
 users.forEach(user => {
     html += `
@@ -93,10 +92,8 @@ users.forEach(user => {
   `
 })
 
-const divContatos = document.getElementById('hangout-talk')
-divContatos.innerHTML = html
-
-let emails = [];
+const divContatos = document.getElementById('hangout-talk');
+divContatos.innerHTML = html;
 
 $("a.write-email").click(function() {
 
@@ -170,8 +167,10 @@ function defineDateString(date){
   let dateParsed = date.getTime();
   const diffTime = Math.abs(dateNow - dateParsed);
   const diffDays = diffTime / (1000 * 60 * 60 * 24);
-  if (diffDays < 1)
-    return `${date.getHours()}:${date.getMinutes()}`;
+  if (diffDays < 1){
+      if(date.getMinutes() < 10)
+      return `${date.getHours()}:0${date.getMinutes()}`;
+    return `${date.getHours()}:${date.getMinutes()}`;}
   if (dateNow.getFullYear() == date.getFullYear()) return `${date.getDate()} de ${months[date.getMonth()]}`;
   return `${date.getDate()}/${date.getMonth() +
     1}/${date.getFullYear()}`;
