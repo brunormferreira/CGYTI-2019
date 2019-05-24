@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/reset.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <link rel="shortcut icon" type="imagem/x-icon" href="assets/images/gmail-icon.png" />
   <title>Gmail</title>
 </head>
@@ -316,13 +317,70 @@
           <img src="assets/images/plus-icon.png" title="Plus" alt="Plus" class="more-google-apps">
         </li>
       </ul>
-      <svg class="icon-more" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 24 24"
-        enable-background="new 0 0 24 24" xml:space="preserve" fill="#5F6368">
+      <svg class="icon-more" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve" fill="#5F6368">
         <path d="M8.59,16.59L13.17,12L8.59,7.41L10,6l6,6l-6,6L8.59,16.59z"></path>
         <path fill="none" d="M0,0h24v24H0V0z"></path>
       </svg>
     </aside>
   </main>
+
+  <section class="new-message invisible">
+      <header class="new-message-header">
+          <p>New message</p>
+          <ul class="new-message-header-icons ">
+            <li class="new-message-minimize header-sprites"></li>
+            <li class="new-message-maximize header-sprites"></li>
+            <li class="new-message-close header-sprites"></li>
+          </ul>
+      </header>
+      <form action="" class="new-email">
+          <input type="email" class="recipient" placeholder="Recipients">
+          <input type="text" class="subject" placeholder="Subject">
+          <textarea name="" id="" cols="30" rows="10" class="email-body"></textarea>
+      </form>
+      <footer class="new-message-footer">
+          <div class="send-buttons">
+              <button class="send-button">
+                  Send
+              </button>
+              <button class="send-options-button">
+                  <img src="assets/images/drop-down-icon.png" alt="">
+              </button>
+          </div>
+          <div class="email-footer-icons">
+              <ul class="email-icons-list-right">
+                  <li class="email-icon">
+                      <img src="assets/images/text-format-icon.png" alt="">
+                  </li>
+                  <li class="email-icon">
+                      <img src="assets/images/attachment-icon.png" alt="">
+                  </li>
+                  <li class="email-icon">
+                      <img src="assets/images/link-icon.png" alt="">
+                  </li>
+                  <li class="email-icon">
+                      <img src="assets/images/emoji-icon.png" alt="">
+                  </li>
+                  <li class="email-icon">
+                      <img src="assets/images/drive-icon.png" alt="">
+                  </li>
+                  <li class="email-icon">
+                      <img src="assets/images/photo-icon.png" alt="">
+                  </li>
+              </ul>
+              <ul class="email-icons-list-left">
+                  <li class="email-icon">
+                      <img src="assets/images/more-icon.png" alt="">
+                  </li>
+                  <li class="email-icon">
+                      <img src="assets/images/delete-icon.png" alt="">
+                  </li>
+              </ul>
+          </div>
+      </footer>
+  </section>
+
+  <script src="assets/js/script.js"></script>
 </body>
 
 </html>
