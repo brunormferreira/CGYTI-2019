@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(../../fonts/roboto/Roboto-Regular.ttf);
+}
+
+.emails {
+    background-color: #fff;
+}
+
+.email-list {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.email-list img {
+    opacity: 0.2;
+}
+
+.email-list tr {
+    display: flex;
+    align-items: center;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    height: 28px;
+    border-bottom: 1px solid #eff2f4;
+    border-top: 1px solid #eff2f4;
+}
+
+.email-list tr:hover {
+    z-index: 1;
+    box-shadow: inset 1px 0 0 #dadce0, inset -1px 0 0 #dadce0, 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
+}
+
+.info-column {
+    width: 168px;
+    padding-right: 32px;
+    font-weight: bold;
+}
+
+.info-column:nth-child(2n) {
+    width: 100%;
+}
+
+.info-column:last-child {
+    width: 120px;
+    padding-right: 0px;
+}
+
+.email-item {
+    color: #202124;
+    letter-spacing: .2px;
+}
+
+.email-item-info {
+    /* color: #5f6368;
+    font-weight: normal; */
+    font-family: "Roboto", Helvetica, sans-serif;
+
+}
+
+.checkbox-column {
+    width: 44px;
+    height: 20px;
+}
+
+.star-column {
+    width: 44px;
+    height: 20px;
+}
