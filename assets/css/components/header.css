@@ -80,6 +80,12 @@ html, body{
     margin-left:10px;
 }
 
+.search-email-click{
+    background-color: white;
+    box-shadow: 0 4px 5px -5px black;
+    border: 0.5px solid rgba(232, 236, 241, 0.8);
+}
+
 .search-container{
     width: 80%;
 }
