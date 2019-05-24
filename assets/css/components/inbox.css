@@ -85,9 +85,8 @@
 .inbox-quantity:hover {
     background-color: #ebebeb;
     opacity: 1;
+    cursor: pointer;
 }
-
-
 
 .nav-inbox {
     display: flex;
