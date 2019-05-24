@@ -75,7 +75,7 @@ const users = [{
         nome: 'Bean',
         foto: 'assets/images/users/bean.jpeg',
         ultimaMensagem: 'Você: Hello XD',
-    }
+    } 
 ]
 
 let html = '';
