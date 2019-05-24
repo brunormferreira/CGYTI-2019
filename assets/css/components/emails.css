@@ -1,10 +1,12 @@
 @font-face {
-    font-family: 'Roboto';
-    src: url(../../fonts/roboto/Roboto-Regular.ttf);
+    font-family: 'Roboto-Light';
+    src: url(../../fonts/roboto/Roboto-Light.ttf);
 }
 
 .emails {
     background-color: #fff;
+    max-height: 300px;
+    overflow-y: scroll;
 }
 
 .email-list {
@@ -24,8 +26,6 @@
     padding-bottom: 4px;
     padding-top: 4px;
     height: 28px;
-    border-bottom: 1px solid #eff2f4;
-    border-top: 1px solid #eff2f4;
 }
 
 .email-list tr:hover {
@@ -51,13 +51,21 @@
 .email-item {
     color: #202124;
     letter-spacing: .2px;
+    font-family: 'Roboto';
+    font-weight: bold;
 }
 
 .email-item-info {
-    /* color: #5f6368;
-    font-weight: normal; */
-    font-family: "Roboto", Helvetica, sans-serif;
+    color: #909498;
+    font-family: 'Roboto-Light';
+    font-weight: 600;
+}
 
+.email-item-date {
+    font-size: 14px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    letter-spacing: 0.3px;
 }
 
 .checkbox-column {
