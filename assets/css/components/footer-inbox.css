@@ -4,9 +4,11 @@
 }
 
 .footer-inbox {
+    display: flex;
+    align-items: center;
+    height: 70px;
     width: 100%;
-    background-color: #c01111;
-    display: block;
+    border-top: 1px solid rgba(232, 236, 241, 0.8);
 }
 
 .footer-inbox-side-paragraph-style {
@@ -37,7 +39,7 @@
 
 .footer-inbox-middle-ancors-style:hover {
     text-decoration: underline;
-} 
+}
 
 .footer-inbox-left {
     float: left;
