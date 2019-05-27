@@ -14,6 +14,16 @@
     background-color: white;
 }
 
+.talk-hangout-detail {
+    background: no-repeat url(//ssl.gstatic.com/chat/babble/sprites/common-517bca7f07a37c64c3263a1411e266a5.png) -754px -182px;
+    height: 14px;
+    width: 14px;
+}
+
+.talk-hangout-name {
+    margin-left: -23px;
+}
+
 .new-message-header-hangout {
     height: 36px;
     display: flex;

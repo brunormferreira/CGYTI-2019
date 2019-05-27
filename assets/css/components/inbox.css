@@ -15,6 +15,10 @@
     border-bottom-width: 1px;
 }
 
+.tr:last-child {
+    border: 0 none;
+}
+
 .icon-inbox-list {
     display: flex;
     list-style: none;
