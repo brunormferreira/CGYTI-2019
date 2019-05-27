@@ -6,7 +6,7 @@
 
 <hr>
 
-__Integrantes__;
+**Integrantes**
 
 <a href="https://github.com/brunormferreira">Bruno Ramires</a><br>
 <a href="https://github.com/LeonardoCesca">Leonardo Cesca</a><br>
@@ -17,4 +17,4 @@ __Integrantes__;
 <br>
 <br>
 
-<img src="https://cdn-images-1.medium.com/max/800/1*-AFFCVJYx-HRlKAdRtymYw.jpeg">
+<img align="right" src="https://cdn-images-1.medium.com/max/800/1*-AFFCVJYx-HRlKAdRtymYw.jpeg">
