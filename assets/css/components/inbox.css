@@ -15,6 +15,10 @@
     border-bottom-width: 1px;
 }
 
+.tr:last-child {
+    border: 0 none;
+}
+
 .icon-inbox-list {
     display: flex;
     list-style: none;
@@ -168,5 +172,4 @@
     font-style: italic;
     color:  #909498;
     border-top: 1px solid rgba(232, 236, 241, 0.8);
-   
 }
