@@ -1,3 +1,15 @@
+$("#square").click(function () {
+  if ($(this).attr("src") == "assets/images/icons/check_box_outline_blank_black_20dp.png") {
+    $(this).attr("src", "assets/images/icons/mark-check.png");
+    $(".square").attr("src", "assets/images/icons/mark-check.png").css("opacity", "1.2");
+    $(".tr").css('background', '#c2dbff');
+  } else {
+    $(this).attr("src", "assets/images/icons/check_box_outline_blank_black_20dp.png");
+    $(".square").attr("src", "assets/images/icons/check_box_outline_blank_black_20dp.png").css("opacity", "0.2");
+    $(".tr").css('background', '#ffffff');
+  }
+});
+
 let months = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"];
 let emails = [{
     name: faker.name.findName(),
@@ -142,14 +154,14 @@ function getNewEmailHtml() {
   });
 
   emails.forEach(function (email) {
-    htmlEmails += `
-        <tr class="email-font-size">
+    htmlEmails +=
+        <tr class="email-font-size tr">
             <td class="checkbox-column">
-              <img src="https://www.gstatic.com/images/icons/material/system/1x/check_box_outline_blank_black_20dp.png"
+              <img src="assets/images/icons/check_box_outline_blank_black_20dp.png" class="square"
                 title="Checkbox" alt="checkbox">
-            </td>
+            </td> 
             <td class="star-column">
-              <img src="https://www.gstatic.com/images/icons/material/system/1x/star_border_black_20dp.png" title="Star"
+              <img  src="assets/images/icons/star_border_black.png" title="Star"
                 alt="star">
             </td>
             <td class="info-column">
@@ -162,7 +174,7 @@ function getNewEmailHtml() {
           <td class="info-column">
             <span class="email-item-time">${defineDateString(email.date)}</span>
           </td>
-          </tr>`;
+        </tr>;
   });
   emailPreview[0].innerHTML = htmlEmails;
 }
