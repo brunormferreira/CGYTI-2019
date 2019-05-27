@@ -196,3 +196,23 @@ function defineDateString(date) {
 
 getNewEmail();
 getNewEmailHtml();
+
+$("li.new-message-minimize").click(function(){
+  $("section.new-message").addClass("invisible");
+  $("section.minimize-new-message").removeClass("invisible");  
+})
+
+$("section.minimize-new-message").click(function(event) {
+
+  if($("li.close-icon").is(event.target)) {
+    $("section.minimize-new-message").addClass("invisible");
+    $("section.new-message").addClass("invisible");
+  }
+  else{
+    $("section.minimize-new-message").addClass("invisible");
+    $("section.new-message").removeClass("invisible");
+  }
+
+
+});
+
