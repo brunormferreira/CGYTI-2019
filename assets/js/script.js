@@ -154,7 +154,7 @@ function getNewEmailHtml() {
   });
 
   emails.forEach(function (email) {
-    htmlEmails +=
+    htmlEmails += `
         <tr class="email-font-size tr">
             <td class="checkbox-column">
               <img src="assets/images/icons/check_box_outline_blank_black_20dp.png" class="square"
@@ -174,7 +174,7 @@ function getNewEmailHtml() {
           <td class="info-column">
             <span class="email-item-time">${defineDateString(email.date)}</span>
           </td>
-        </tr>;
+        </tr>`
   });
   emailPreview[0].innerHTML = htmlEmails;
 }
