@@ -206,23 +206,3 @@ $("section.minimize-new-message").click(function(event) {
 
 });
 
-// $("li.full-size-icon").click(function(){
-//   $("section.minimize-new-message").addClass("invisible");
-//   $("section.new-message").removeClass("invisible");
-// })
-
-// $("li.minimize-icon").click(function(){
-//   $("section.minimize-new-message").addClass("invisible");
-//   $("section.new-message").removeClass("invisible");
-// })
-
-// $("section.minimize-new-message").click(function(){
-//   $("section.minimize-new-message").addClass("invisible");
-//   $("section.new-message").removeClass("invisible");
-// })
-
-// $("li.close-icon").click(function(){
-//   $("section.minimize-new-message").addClass("invisible");
-//   $("section.new-message").addClass("invisible");
-// })
-
