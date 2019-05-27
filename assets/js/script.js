@@ -1,16 +1,5 @@
-$("#square").click(function () {
-  if ($(this).attr("src") == "assets/images/icons/check_box_outline_blank_black_20dp.png") {
-    $(this).attr("src", "assets/images/icons/mark-check.png");
-    $(".square").attr("src", "assets/images/icons/mark-check.png").css("opacity", "1.2");
-    $(".tr").css('background', '#c2dbff');
-  } else {
-    $(this).attr("src", "assets/images/icons/check_box_outline_blank_black_20dp.png");
-    $(".square").attr("src", "assets/images/icons/check_box_outline_blank_black_20dp.png").css("opacity", "0.2");
-    $(".tr").css('background', '#ffffff');
-  }
-});
-
 let months = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"];
+
 let emails = [{
     name: faker.name.findName(),
     subject: faker.random.words(3),
@@ -49,7 +38,62 @@ let emails = [{
   }
 ];
 
+let sentEmails = [];
+
+const users = [{
+  name: 'Mauricio',
+  picture: 'assets/images/users/mauricio.jpeg',
+  lastMessage: 'Você: Funfa sim!',
+
+},
+{
+  name: 'Tejada',
+  picture: 'assets/images/users/tejada.png',
+  lastMessage: 'Você: Sou backend :P',
+
+},
+{
+  name: 'Bean',
+  picture: 'assets/images/users/bean.jpeg',
+  lastMessage: 'Você: Hello XD',
+}
+]
+
 const emailPreview = document.getElementsByClassName("email-list");
+
+const divContatos = document.getElementById('hangout-talk');
+
+let intervalEmail = window.setInterval(getNewEmail, 15000);
+
+let intervalNewEmail = window.setInterval(getNewEmails, 60000);
+
+let html = '';
+
+users.forEach(user => {
+  html += `
+      <div class="hangout-talk-profile" onClick='setChat(${JSON.stringify(user)})'>
+        <img src=${user.picture} title="User" alt="User" class="profile-photo" />
+        <div class="hangout-users-info">
+          <p class="profile-name">${user.name}</p>
+          <span class="profile-message">${user.lastMessage}</span>
+        </div>
+      </div>
+  `
+})
+divContatos.innerHTML = html;
+
+
+$("#square").click(function () {
+  if ($(this).attr("src") == "assets/images/icons/check_box_outline_blank_black_20dp.png") {
+    $(this).attr("src", "assets/images/icons/mark-check.png");
+    $(".square").attr("src", "assets/images/icons/mark-check.png").css("opacity", "1.2");
+    $(".tr").css('background', '#c2dbff');
+  } else {
+    $(this).attr("src", "assets/images/icons/check_box_outline_blank_black_20dp.png");
+    $(".square").attr("src", "assets/images/icons/check_box_outline_blank_black_20dp.png").css("opacity", "0.2");
+    $(".tr").css('background', '#ffffff');
+  }
+});
 
 $("a.write-email").click(function () {
   $("section.new-message").removeClass("invisible");
@@ -71,70 +115,71 @@ $("body").click(function (event) {
   }
 });
 
-const users = [{
-    nome: 'Mauricio',
-    foto: 'assets/images/users/mauricio.jpeg',
-    ultimaMensagem: 'Você: Funfa sim!',
-
-  },
-  {
-    nome: 'Tejada',
-    foto: 'assets/images/users/tejada.png',
-    ultimaMensagem: 'Você: Sou backend :P',
-
-  },
-  {
-    nome: 'Bean',
-    foto: 'assets/images/users/bean.jpeg',
-    ultimaMensagem: 'Você: Hello XD',
-  }
-]
-
-function setChat(user) {
-  $(".talk-hangout-name").text(user.nome);
-}
-
-let html = '';
-
-users.forEach(user => {
-  html += `
-      <div class="hangout-talk-profile" onClick='setChat(${JSON.stringify(user)})'>
-        <img src=${user.foto} title="User" alt="User" class="profile-photo" />
-        <div class="hangout-users-info">
-          <p class="profile-name">${user.nome}</p>
-          <span class="profile-message">${user.ultimaMensagem}</span>
-        </div>
-      </div>
-  `
-})
-
-const divContatos = document.getElementById('hangout-talk');
-divContatos.innerHTML = html;
-
-$("a.write-email").click(function () {
-
+$(".write-email").click(function () {
   $("section.new-message").removeClass("invisible");
 });
 
-$("li.new-message-close").click(function () {
-  $("section.new-message").addClass("invisible");
+$(".new-message-close").click(function () {
+  $(".new-message").addClass("invisible");
 });
 
-$("label.search-email-box").click(function () {
+$(".search-email-box").click(function () {
   $(this).addClass("search-email-click");
-  $("input.search-email").css('background-color', 'white');
+  $(".search-email").css('background-color', 'white');
 });
 
 $(".hangout-talk-profile").click(function () {
   $(".talk-hangout").removeClass("invisible");
 });
 
-$("li.new-message-close").click(function () {
+$(".new-message-close").click(function () {
   $(".talk-hangout").addClass("invisible");
 });
 
-let intervalEmail = window.setInterval(getNewEmail, 15000);
-let intervalNewEmail = window.setInterval(getNewEmailHtml, 60000);
+$("#options").click(function () {
+  $(".more-nav-table").toggleClass("invisible");
+});
+
+$("#refresh").click(getNewEmails);
+
+$(".send-button").click(function (){
+  let newSentEmail = {
+      name: $(".recipient").val(),
+      subject: $(".subject").val(),
+      preview: $(".email-body").val().substring(0, 100),
+      date: new Date()
+  }
+  sentEmails.unshift(newSentEmail);
+$(".recipient").val('');
+$(".subject").val('');
+$(".email-body").val('');
+$(".new-message").addClass('invisible');
+});
+
+$("li.new-message-minimize").click(function(){
+  $("section.new-message").addClass("invisible");
+  $("section.minimize-new-message").removeClass("invisible");  
+})
+
+$("section.minimize-new-message").click(function(event) {
+
+  if($("li.close-icon").is(event.target)) {
+    $("section.minimize-new-message").addClass("invisible");
+    $("section.new-message").addClass("invisible");
+  }
+  else{
+    $("section.minimize-new-message").addClass("invisible");
+    $("section.new-message").removeClass("invisible");
+  }
+});
+
+$("#sent-emails").click(getSentEmails);
+
+$('#received-emails').click(getNewEmails);
+
+function setChat(user) {
+  $(".talk-hangout-name").text(user.name);
+}
 
 function getNewEmail() {
   let newEmail = {
@@ -146,7 +191,7 @@ function getNewEmail() {
   emails.push(newEmail);
 }
 
-function getNewEmailHtml() {
+function getNewEmails() {
   let htmlEmails = "";
 
   emails.sort(function (email1, email2) {
@@ -179,6 +224,39 @@ function getNewEmailHtml() {
   emailPreview[0].innerHTML = htmlEmails;
 }
 
+function getSentEmails() {
+  let htmlSentEmails = "";
+
+  sentEmails.sort(function (email1, email2) {
+    return new Date(email2.date) - new Date(email1.date);
+  });
+
+  sentEmails.forEach(function (email) {
+    htmlSentEmails += `
+        <tr class="email-font-size tr">
+            <td class="checkbox-column">
+              <img src="assets/images/icons/check_box_outline_blank_black_20dp.png" class="square"
+                title="Checkbox" alt="checkbox">
+            </td> 
+            <td class="star-column">
+              <img  src="assets/images/icons/star_border_black.png" title="Star"
+                alt="star">
+            </td>
+            <td class="info-column">
+            <span class="email-item">Para: ${email.name}</span>
+          </td>
+          <td class="info-column">
+            <span class="email-item">${email.subject} - </span>
+            <span class="email-item-info">${email.preview} </span>
+          </td>
+          <td class="info-column">
+            <span class="email-item-time">${defineDateString(email.date)}</span>
+          </td>
+        </tr>`
+  });
+  emailPreview[0].innerHTML = htmlSentEmails;
+}
+
 function defineDateString(date) {
   let dateNow = new Date();
   let dateParsed = date.getTime();
@@ -194,25 +272,5 @@ function defineDateString(date) {
     1}/${date.getFullYear()}`;
 }
 
-$(".hover-circle").click(getNewEmailHtml);
-
-$("li.new-message-minimize").click(function(){
-  $("section.new-message").addClass("invisible");
-  $("section.minimize-new-message").removeClass("invisible");  
-})
-
-$("section.minimize-new-message").click(function(event) {
-
-  if($("li.close-icon").is(event.target)) {
-    $("section.minimize-new-message").addClass("invisible");
-    $("section.new-message").addClass("invisible");
-  }
-  else{
-    $("section.minimize-new-message").addClass("invisible");
-    $("section.new-message").removeClass("invisible");
-  }
-});
-
-
 getNewEmail();
-getNewEmailHtml();
+getNewEmails();
