@@ -5,6 +5,16 @@
     position: relative;
 }
 
+.email-list {
+    background-color: #ffffff;
+}
+
+.tr {
+    border-bottom-color: #e8ecf1cc;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
 .icon-inbox-list {
     display: flex;
     list-style: none;
