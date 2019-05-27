@@ -116,6 +116,14 @@ $("body").click(function (event) {
     }
 });
 
+$(".hangout-talk-profile").click(function() {
+  $(".talk-hangout").removeClass("invisible");
+});
+
+$("li.new-message-close").click(function () {
+  $(".talk-hangout").addClass("invisible");
+});
+
 let intervalEmail = window.setInterval(getNewEmail, 15000);
 let intervalNewEmail = window.setInterval(getNewEmailHtml, 15000);
 

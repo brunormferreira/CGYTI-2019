@@ -5,8 +5,8 @@
 
 .emails {
     background-color: #fff;
-    max-height: 300px;
     overflow-y: scroll;
+    flex: 1;
 }
 
 .email-list {
