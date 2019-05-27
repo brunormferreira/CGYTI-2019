@@ -215,4 +215,3 @@ $("section.minimize-new-message").click(function(event) {
 
 
 });
-
