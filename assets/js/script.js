@@ -10,7 +10,6 @@ $("#square").click(function () {
   }
 });
 
-
 let months = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"];
 let emails = [{
     name: faker.name.findName(),
@@ -72,6 +71,45 @@ $("body").click(function (event) {
   }
 });
 
+const users = [{
+    nome: 'Mauricio',
+    foto: 'assets/images/users/mauricio.jpeg',
+    ultimaMensagem: 'Você: Funfa sim!',
+
+  },
+  {
+    nome: 'Tejada',
+    foto: 'assets/images/users/tejada.png',
+    ultimaMensagem: 'Você: Sou backend :P',
+
+  },
+  {
+    nome: 'Bean',
+    foto: 'assets/images/users/bean.jpeg',
+    ultimaMensagem: 'Você: Hello XD',
+  }
+]
+
+function setChat(user) {
+  $(".talk-hangout-name").text(user.nome);
+}
+
+let html = '';
+
+users.forEach(user => {
+  html += `
+      <div class="hangout-talk-profile" onClick='setChat(${JSON.stringify(user)})'>
+        <img src=${user.foto} title="User" alt="User" class="profile-photo" />
+        <div class="hangout-users-info">
+          <p class="profile-name">${user.nome}</p>
+          <span class="profile-message">${user.ultimaMensagem}</span>
+        </div>
+      </div>
+  `
+})
+
+const divContatos = document.getElementById('hangout-talk');
+divContatos.innerHTML = html;
 
 $("a.write-email").click(function () {
 
@@ -85,13 +123,6 @@ $("li.new-message-close").click(function () {
 $("label.search-email-box").click(function () {
   $(this).addClass("search-email-click");
   $("input.search-email").css('background-color', 'white');
-});
-
-$("body").click(function (event) {
-  if (!$("label.search-email-box").is(event.target) && !$("input.search-email").is(event.target)) {
-    $("label.search-email-box").removeClass("search-email-click");
-    $("input.search-email").css('background-color', '#f1f3f4');
-  }
 });
 
 $(".hangout-talk-profile").click(function () {
@@ -123,8 +154,8 @@ function getNewEmailHtml() {
   });
 
   emails.forEach(function (email) {
-    htmlEmails += `
-        <tr class="tr">
+    htmlEmails +=
+        <tr class="email-font-size tr">
             <td class="checkbox-column">
               <img src="assets/images/icons/check_box_outline_blank_black_20dp.png" class="square"
                 title="Checkbox" alt="checkbox">
@@ -141,9 +172,9 @@ function getNewEmailHtml() {
             <span class="email-item-info">${email.preview} </span>
           </td>
           <td class="info-column">
-            <span>${defineDateString(email.date)}</span>
+            <span class="email-item-time">${defineDateString(email.date)}</span>
           </td>
-          </tr>`;
+        </tr>;
   });
   emailPreview[0].innerHTML = htmlEmails;
 }
@@ -165,39 +196,3 @@ function defineDateString(date) {
 
 getNewEmail();
 getNewEmailHtml();
-
-const users = [{
-    nome: 'Mauricio',
-    foto: 'assets/images/users/mauricio.jpeg',
-    ultimaMensagem: 'Você: Funfa sim!',
-
-  },
-  {
-    nome: 'Tejada',
-    foto: 'assets/images/users/tejada.png',
-    ultimaMensagem: 'Você: Sou backend :P',
-
-  },
-  {
-    nome: 'Bean',
-    foto: 'assets/images/users/bean.jpeg',
-    ultimaMensagem: 'Você: Hello XD',
-  }
-]
-
-let html = '';
-
-users.forEach(user => {
-  html += `
-<div class="hangout-talk-profile">
-      <img src=${user.foto} title="User" alt="User" class="profile-photo" />
-      <div class="hangout-users-info">
-        <p class="profile-name">${user.nome}</p>
-        <span class="profile-message">${user.ultimaMensagem}</span>
-      </div>
-    </div>
-`
-})
-
-const divContatos = document.getElementById('hangout-talk');
-divContatos.innerHTML = html;
