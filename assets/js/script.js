@@ -68,29 +68,6 @@ $("body").click(function (event) {
   if (!$("label.search-email-box").is(event.target) && !$("input.search-email").is(event.target)) {
     $("label.search-email-box").removeClass("search-email-click");
     $("input.search-email").css("background-color", "#f1f3f4");
-<<<<<<< HEAD
-  }});
-
-const users = [{
-        nome: 'Mauricio',
-        foto: 'assets/images/users/mauricio.jpeg',
-        ultimaMensagem: 'Você: Funfa sim!',
-
-    },
-    {
-        nome: 'Tejada',
-        foto: 'assets/images/users/tejada.png',
-        ultimaMensagem: 'Você: Sou backend :P',
-
-    },
-    {
-        nome: 'Bean',
-        foto: 'assets/images/users/bean.jpeg',
-        ultimaMensagem: 'Você: Hello XD',
-    }
-]
-
-=======
   }
 });
 
@@ -117,7 +94,6 @@ function setChat(user) {
   $(".talk-hangout-name").text(user.nome);
 }
 
->>>>>>> 114344a8859cf99c9631f1f1900cabecc1575308
 let html = '';
 
 users.forEach(user => {
@@ -134,11 +110,8 @@ users.forEach(user => {
 
 const divContatos = document.getElementById('hangout-talk');
 divContatos.innerHTML = html;
-<<<<<<< HEAD
-=======
 
 $("a.write-email").click(function () {
->>>>>>> 114344a8859cf99c9631f1f1900cabecc1575308
 
   $("section.new-message").removeClass("invisible");
 });
@@ -211,25 +184,17 @@ function defineDateString(date) {
   let dateParsed = date.getTime();
   const diffTime = Math.abs(dateNow - dateParsed);
   const diffDays = diffTime / (1000 * 60 * 60 * 24);
-<<<<<<< HEAD
-  if (diffDays < 1){
-    return `${date.getHours()}:${date.getMinutes()}`;}
-=======
   if (diffDays < 1) {
     if (date.getMinutes() < 10)
       return `${date.getHours()}:0${date.getMinutes()}`;
     return `${date.getHours()}:${date.getMinutes()}`;
   }
->>>>>>> 114344a8859cf99c9631f1f1900cabecc1575308
   if (dateNow.getFullYear() == date.getFullYear()) return `${date.getDate()} de ${months[date.getMonth()]}`;
   return `${date.getDate()}/${date.getMonth() +
     1}/${date.getFullYear()}`;
 }
 
 getNewEmail();
-<<<<<<< HEAD
-getNewEmailHtml();
-=======
 getNewEmailHtml();
 
 $("li.new-message-minimize").click(function(){
@@ -250,5 +215,3 @@ $("section.minimize-new-message").click(function(event) {
 
 
 });
-
->>>>>>> 114344a8859cf99c9631f1f1900cabecc1575308
