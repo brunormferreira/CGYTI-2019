@@ -155,7 +155,6 @@
 
 .hangout-talk {
     width: 217px;
-    height: 356px;
     margin: 0 auto;
     border-top: 1px solid rgba(100, 121, 143, 0.122);
 }
@@ -202,6 +201,9 @@
 
 .hangout-footer {
     display: flex;
+    width: 256px;
+    position: absolute;
+    bottom: 0;
 }
 
 .hangout-list-options {
