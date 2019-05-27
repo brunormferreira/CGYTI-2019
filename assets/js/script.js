@@ -134,7 +134,7 @@ $("li.new-message-close").click(function () {
 });
 
 let intervalEmail = window.setInterval(getNewEmail, 15000);
-let intervalNewEmail = window.setInterval(getNewEmailHtml, 15000);
+let intervalNewEmail = window.setInterval(getNewEmailHtml, 60000);
 
 function getNewEmail() {
   let newEmail = {
@@ -194,8 +194,7 @@ function defineDateString(date) {
     1}/${date.getFullYear()}`;
 }
 
-getNewEmail();
-getNewEmailHtml();
+$(".hover-circle").click(getNewEmailHtml);
 
 $("li.new-message-minimize").click(function(){
   $("section.new-message").addClass("invisible");
@@ -212,6 +211,8 @@ $("section.minimize-new-message").click(function(event) {
     $("section.minimize-new-message").addClass("invisible");
     $("section.new-message").removeClass("invisible");
   }
-
-
 });
+
+
+getNewEmail();
+getNewEmailHtml();
