@@ -5,6 +5,7 @@
 #### Clonar Gmail e implementar o máximo de funcionalidades que for possível de acordo com o tempo estipulado (4 dias);
 
 <hr>
+<img align="right" src="https://cdn-images-1.medium.com/max/800/1*-AFFCVJYx-HRlKAdRtymYw.jpeg">
 
 **Integrantes**
 
@@ -27,4 +28,3 @@ menu mais opções (marcar como lidas)
 checkbox em todas as mensagens
 ```
 
-<img align="right" src="https://cdn-images-1.medium.com/max/800/1*-AFFCVJYx-HRlKAdRtymYw.jpeg">
