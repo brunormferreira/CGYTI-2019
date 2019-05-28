@@ -8,8 +8,6 @@
 
 **Integrantes**
 
-<div>
-
 <a href="https://github.com/brunormferreira">Bruno Ramires</a><br>
 <a href="https://github.com/LeonardoCesca">Leonardo Cesca</a><br>
 <a href="https://github.com/ggraeff98">Gustavo Graeff</a><br>
@@ -20,14 +18,18 @@
 
 **Funcionalidades**
 
-*escrever nova mensagem*<br>
-*maximizar e minimizar aba nova mensagem*<br>
-*receber nova mensagem na aba enviados*<br>
-*receber mensagens aleatórias via api*<br>
-*contatos do hangout dinamicos*<br>
-*menu mais opções (marcar como lidas)*<br>
-*checkbox em todas as mensagens*
+*escrever nova mensagem*
 
-</div>
+*maximizar e minimizar aba nova mensagem*
+
+*receber nova mensagem na aba enviados*
+
+*receber mensagens aleatórias via api*
+
+*contatos do hangout dinamicos*
+
+*menu mais opções (marcar como lidas)*
+
+*checkbox em todas as mensagens*
 
 <img align="right" src="https://cdn-images-1.medium.com/max/800/1*-AFFCVJYx-HRlKAdRtymYw.jpeg">
