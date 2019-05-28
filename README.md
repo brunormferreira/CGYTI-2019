@@ -16,20 +16,15 @@
 
 <br>
 
-**Funcionalidades**
-
-*escrever nova mensagem*
-
-*maximizar e minimizar aba nova mensagem*
-
-*receber nova mensagem na aba enviados*
-
-*receber mensagens aleatórias via api*
-
-*contatos do hangout dinamicos*
-
-*menu mais opções (marcar como lidas)*
-
-*checkbox em todas as mensagens*
+> **Funcionalidades**
+```
+escrever nova mensagem
+maximizar e minimizar aba nova mensagem
+receber nova mensagem na aba enviados
+receber mensagens aleatórias via api
+contatos do hangout dinamicos
+menu mais opções (marcar como lidas)
+checkbox em todas as mensagens
+```
 
 <img align="right" src="https://cdn-images-1.medium.com/max/800/1*-AFFCVJYx-HRlKAdRtymYw.jpeg">
